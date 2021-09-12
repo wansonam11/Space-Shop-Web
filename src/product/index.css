@@ -1,0 +1,83 @@
+#image-box {
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+#image-box > img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+#information-box {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 12px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#profile-box {
+  height: 40px;
+  padding: 8px;
+  border-bottom: 1px solid #e9ecef;
+  align-items: center;
+  background-color: #e9ecef;
+}
+
+#seller-box {
+  align-items: center;
+  display: flex;
+}
+
+#seller-box > img {
+  width: 50px;
+  height: 50px;
+}
+
+#profile-box > span {
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgb(238, 233, 243);
+}
+
+#contents-box {
+  padding: 15px;
+}
+#contents-box2 {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+#name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#price {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: rgb(138, 32, 132);
+}
+
+#createdAt {
+  font-size: 15px;
+  color: rgb(180, 180, 180);
+}
+
+#description {
+  margin-top: 34px;
+  font-size: 18px;
+}
+
+#purchase-button {
+  margin-top: 8px;
+  border-radius: 12px;
+}
