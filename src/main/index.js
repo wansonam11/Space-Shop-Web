@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { API_URL } from "../config/constants.js";
-import { Carousel } from "antd";
+import { Carousel, Divider } from "antd";
 
 dayjs.extend(relativeTime);
 
@@ -48,7 +48,15 @@ function MainPage() {
           );
         })}
       </Carousel>
-      <h1 id="product-headline">販売商品のリスト</h1>
+
+      <div id="product-headline-box">
+        <h1 id="product-headline">
+          <b> 【 Our Mission 】</b>
+          私たちの商品は宇宙と人間の共生を目指し、世界各地の慈善団体を積極的に支援しています。
+        </h1>
+      </div>
+      <Divider />
+
       <div id="product-list">
         {products.map(function (product, index) {
           return (
@@ -63,7 +71,7 @@ function MainPage() {
                 </div>
                 <div className="product-contents">
                   <span className="product-name">{product.name}</span>
-                  <span className="product-price">{product.price}円</span>
+                  <span className="product-price">¥ {product.price}</span>
                 </div>
                 <div className="product-footer">
                   <div className="product-seller">

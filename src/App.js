@@ -17,6 +17,7 @@ function App() {
             <img src="/images/logo/logo.png" />
           </Link>
           <Button
+            id="upload-button"
             size="large"
             onClick={function () {
               history.push("/upload");

@@ -75,12 +75,12 @@ function UploadPage() {
         <Form.Item
           label={<div className="upload-label">販売者</div>}
           name="seller"
-          rules={[{ required: true, message: "판매자 이름을 입력해주세요" }]}
+          rules={[{ required: true, message: "販売者を入力してください。" }]}
         >
           <Input
             className="upload-name"
             size="large"
-            placeholder="이름을 입력해주세요"
+            placeholder="名前を入力してください。"
           />
         </Form.Item>
 
@@ -88,7 +88,7 @@ function UploadPage() {
         <Form.Item
           name="name"
           label={<div className="upload-label">商品名</div>}
-          rules={[{ required: true, message: "상품 이름을 입력해주세요" }]}
+          rules={[{ required: true, message: "商品名を入力してください。" }]}
         >
           <Input
             className="upload-name"
@@ -101,7 +101,7 @@ function UploadPage() {
         <Form.Item
           name="price"
           label={<div className="upload-label">商品物価</div>}
-          rules={[{ required: true, message: "상품 가격을 입력해주세요" }]}
+          rules={[{ required: true, message: "価格を入力してください。" }]}
         >
           <InputNumber
             defaultValue={0}
@@ -113,19 +113,19 @@ function UploadPage() {
         <Form.Item
           name="description"
           label={<div className="upload-label">商品紹介 </div>}
-          rules={[{ required: true, message: "상품 소개를 입력해주세요" }]}
+          rules={[{ required: true, message: "商品情報を登録してください。" }]}
         >
           <Input.TextArea
             size="large"
             id="product-description"
             showCount
             maxLength={300}
-            placeholder="상품 소개를 적어주세요"
+            placeholder="상商品情報を登録してください。"
           />
         </Form.Item>
         <Form.Item>
           <Button id="submit-button" size="large" htmlType="submit">
-            문제 등록하기
+            商品を登録する
           </Button>
         </Form.Item>
       </Form>

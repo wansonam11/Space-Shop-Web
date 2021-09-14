@@ -6,6 +6,7 @@ import { Divider, message } from "antd";
 import { API_URL } from "../config/constants.js";
 import dayjs from "dayjs";
 import { Button } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
 
 function ProductPage() {
   const { id } = useParams();
@@ -33,7 +34,7 @@ function ProductPage() {
     axios
       .post(`${API_URL}/purchase/${id}`)
       .then((result) => {
-        message.info("구매가 완료되었습니다");
+        message.info("購入が完了しました。");
         getProduct();
       })
       .catch((error) => {
@@ -48,27 +49,30 @@ function ProductPage() {
       </div>
       <div id="information-box">
         <div id="profile-box">
-          <span>{product.name}</span>
+          <span> {product.name} </span>
         </div>
         <div id="contents-box">
           <div id="seller-box">
             <img src="/images/logo/avatar.png" />
-            <div id="name">{product.seller}</div>
+            <div id="seller">{product.seller}</div>
           </div>
           <div id="contents-box2">
-            <div id="price">{product.price}円</div>
             <div id="createdAt">
-              {dayjs(product.createdAt).format("YYYY년 MM월 DD일")}
+              {dayjs(product.createdAt).format("YYYY年 MM月 DD日")}
             </div>
+            <div id="price">￥ {product.price}</div>
+
             <Button
               id="purchase-button"
               size="large"
               type="primary"
               danger
+              block
+              icon={<DownloadOutlined />}
               onClick={onClickPurchase}
               disabled={product.soldout === 1}
             >
-              구매하기
+              ご購入する
             </Button>
             <Divider />
             <pre id="description">{product.description}</pre>
