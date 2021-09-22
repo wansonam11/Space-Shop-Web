@@ -67,7 +67,6 @@ function ProductPage() {
               size="large"
               type="primary"
               danger
-              block
               icon={<DownloadOutlined />}
               onClick={onClickPurchase}
               disabled={product.soldout === 1}

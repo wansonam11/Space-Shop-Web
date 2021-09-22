@@ -37,7 +37,7 @@ function MainPage() {
 
   return (
     <div>
-      <Carousel autoplay autoplaySpeed={2500}>
+      <Carousel autoplay autoplaySpeed={2000}>
         {banners.map((banner, index) => {
           return (
             <Link to={banner.href}>
